@@ -66,8 +66,8 @@
     "published_timestamp": 1792339371,
     "duration_seconds": 89.210998,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 45
   },
   {
     "id": "7697627616790478513",
@@ -76,8 +76,8 @@
     "published_timestamp": 1792243593,
     "duration_seconds": 4.54966,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 1
   },
   {
     "id": "7696929407952902266",
@@ -86,8 +86,8 @@
     "published_timestamp": 1792081028,
     "duration_seconds": 119.209796,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 67
   },
   {
     "id": "7696145534431563034",
@@ -96,8 +96,8 @@
     "published_timestamp": 1791898525,
     "duration_seconds": 109.737007,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 53
   },
   {
     "id": "7695802048134057251",

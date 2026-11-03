@@ -3,11 +3,20 @@ R=pathlib.Path(__file__).resolve().parents[1]
 items=json.loads((R/'data/manifest-raw.json').read_text()); statuses=json.loads((R/'data/download-status.json').read_text());status={x['id']:x for x in statuses}
 (R/'notes').mkdir(exist_ok=True)
 clean=[];rows=[]
+editorial_path=R/'data/editorial-summaries.json'
+editorial=json.loads(editorial_path.read_text()) if editorial_path.exists() else {}
 for v in items:
  i=v['aweme_id']; raw=R/f'transcripts/raw/{i}.json';trans=json.loads(raw.read_text()) if raw.exists() else None
  clean.append({'id':i,'title':v['desc'],'url':f'https://www.douyin.com/video/{i}','published_timestamp':v['create_time'],'duration_seconds':status[i]['duration'],'download_status':status[i]['status'],'asr_status':'done' if trans else 'pending','segments':len(trans['segments']) if trans else None})
  note=f"# {v['desc']}\n\n来源：https://www.douyin.com/video/{i}\n\n"
- if trans:
+ if trans and i in editorial:
+  e=editorial[i]
+  note+='## 基于完整机器转写的中文摘要\n\n'+e['overview']+'\n\n'
+  for point in e['points']:
+   note+=f"- [{point['start']:.2f}–{point['end']:.2f}秒] {point['text']}\n"
+  note+='\n### 证据与限制\n\n'+e['limits']+'\n\n摘要为编辑性归纳，原始ASR未改写；讲者观点、宣传和举例不代表独立核验事实。\n'
+  note+=f'\n[完整带时间轴机器转写](../transcripts/text/{i}.md) · [原始ASR JSON](../transcripts/raw/{i}.json)\n'
+ elif trans:
   segments=trans['segments'];note+='## 机器转写摘录（非人工摘要）\n\n以下按时间顺序选取信息量较高的语段，保留ASR原始措辞，可能存在同音字、专名或术语错误。不能将营销口述视为独立核验事实。\n\n'
   # Deterministic extractive notes, never manufacture spoken content.
   candidates=[]
@@ -44,7 +53,7 @@ README=f'''# 小智_企业AI落地：视频与真实转写笔记
 
 `transcripts/raw/` 是对本地真实音频运行 faster-whisper-small 的原始结果，保留秒级时间轴和置信度；`transcripts/text/` 仅格式化原始转写，没有靠标题生成口播。小模型中文专名、FDE等词可能误识别，**尚未逐字人工校对**。
 
-`notes/` 当前是明确标记的机器转写摘录，不冒充人工完整摘要。`SUMMARY.md` 为少量已完成转写的人工综合整理，不代表108条全量结论。未检测到语音时仅报告ASR检测结果，不冒充人工听辨。
+`notes/` 中已有 **{sum(i['id'] in editorial for i in clean)}** 条基于完整转写编写的中文摘要，包含时间戳和来源限制；其余已完成ASR的条目仍为明确标记的机器摘录。摘要存于 `data/editorial-summaries.json`，再次发布时会保留。`SUMMARY.md` 为已读转写的阶段性综合整理，不代表108条全量结论。未检测到语音时仅报告ASR检测结果，不冒充人工听辨。
 
 ## 本地媒体与仓库
 

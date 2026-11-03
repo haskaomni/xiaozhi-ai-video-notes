@@ -1,0 +1,15 @@
+{
+  "id": "7697627616790478513",
+  "model": "faster-whisper-small",
+  "language": "zh",
+  "duration": 4.551125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.56,
+      "text": "加油吧朋友,努力是能被看见的",
+      "avg_logprob": -0.35986902192234993,
+      "no_speech_prob": 0.01919209212064743
+    }
+  ]
+}
