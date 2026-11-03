@@ -1,0 +1,7 @@
+media/
+.venv/
+__pycache__/
+data/pages/
+data/manifest-raw.json
+logs/
+*.part
