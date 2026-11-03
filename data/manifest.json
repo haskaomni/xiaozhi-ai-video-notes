@@ -126,8 +126,8 @@
     "published_timestamp": 1791428400,
     "duration_seconds": 232.85,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 142
   },
   {
     "id": "7693944422131715382",
