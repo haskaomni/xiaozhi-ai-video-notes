@@ -1,0 +1,22 @@
+{
+  "id": "7685205549168447609",
+  "model": "faster-whisper-small",
+  "language": "zh",
+  "duration": 4.24925,
+  "segments": [
+    {
+      "start": 0.02,
+      "end": 2.02,
+      "text": "FD入企城堡啊",
+      "avg_logprob": -0.37095595625313843,
+      "no_speech_prob": 0.01890425942838192
+    },
+    {
+      "start": 2.02,
+      "end": 4.02,
+      "text": "FD入企城堡",
+      "avg_logprob": -0.37095595625313843,
+      "no_speech_prob": 0.01890425942838192
+    }
+  ]
+}
