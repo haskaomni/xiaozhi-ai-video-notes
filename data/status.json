@@ -3,12 +3,12 @@
   "collected": 38,
   "downloaded": 38,
   "audio_extracted": 38,
-  "asr_completed": 13,
+  "asr_completed": 14,
   "unavailable_due_to_login": 70,
   "downloaded_duration_seconds": 7533.190364,
   "video_bytes": 848671437,
   "audio_bytes": 241062074,
   "blocker": "API not_login_module.guide_login_tip_exist=true; first-page has_more=1; next-page only returns status_code=0 without aweme_list; no saved browser login",
   "asr_model": "faster-whisper-small int8 CPU zh",
-  "updated_utc": "2026-11-03T15:23:39.291704+00:00"
+  "updated_utc": "2026-11-03T15:27:59.471785+00:00"
 }
