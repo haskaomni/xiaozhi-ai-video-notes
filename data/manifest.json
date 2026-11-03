@@ -206,8 +206,8 @@
     "published_timestamp": 1790312472,
     "duration_seconds": 97.568798,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 40
   },
   {
     "id": "7688732217538841899",
@@ -216,8 +216,8 @@
     "published_timestamp": 1790172479,
     "duration_seconds": 174.08,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 105
   },
   {
     "id": "7688017435085032750",
@@ -226,8 +226,8 @@
     "published_timestamp": 1790067600,
     "duration_seconds": 126.92,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 49
   },
   {
     "id": "7688010131828690217",
@@ -236,8 +236,8 @@
     "published_timestamp": 1790038800,
     "duration_seconds": 39.288005,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 22
   },
   {
     "id": "7688008318559718696",
@@ -246,8 +246,8 @@
     "published_timestamp": 1790003939,
     "duration_seconds": 122.902993,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 83
   },
   {
     "id": "7687937633783867505",
@@ -256,8 +256,8 @@
     "published_timestamp": 1789987468,
     "duration_seconds": 118.317959,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 0
   },
   {
     "id": "7687283656062194618",
@@ -266,8 +266,8 @@
     "published_timestamp": 1789835202,
     "duration_seconds": 68.866667,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 37
   },
   {
     "id": "7686793904544603515",
@@ -276,8 +276,8 @@
     "published_timestamp": 1789721173,
     "duration_seconds": 64.340998,
     "download_status": "ok",
-    "asr_status": "pending",
-    "segments": null
+    "asr_status": "done",
+    "segments": 36
   },
   {
     "id": "7685623491299919089",
